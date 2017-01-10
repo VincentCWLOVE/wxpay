@@ -16,10 +16,12 @@
  ```
 
 3.调用：
-	```php
+```php
+
         Vendor('Weixinpay.Weixinpay');
         $order_info = new \Weixinpay();
         $data["order"] = $order_info->getParameters('请参考微信开发者文档获取用户的openid');
-		    $this->assign('data',$data);
+	$this->assign('data',$data);
         $this->show();
-	```
+	
+```
