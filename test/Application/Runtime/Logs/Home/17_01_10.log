@@ -1,0 +1,31 @@
+[ 2017-01-10T21:41:58+08:00 ] ::1 /test/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000190s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001568s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2017-01-10T22:13:24+08:00 ] ::1 /test/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+NOTIC: [2] Missing argument 1 for Weixinpay::__construct(), called in /Applications/XAMPP/xamppfiles/htdocs/test/Application/Home/Controller/IndexController.class.php on line 7 and defined /Applications/XAMPP/xamppfiles/htdocs/test/ThinkPHP/Library/Vendor/Weixinpay/Weixinpay.php 第 13 行.
+NOTIC: [8] Undefined variable: result /Applications/XAMPP/xamppfiles/htdocs/test/Application/Home/Controller/IndexController.class.php 第 8 行.
+NOTIC: [8] Trying to get property of non-object /Applications/XAMPP/xamppfiles/htdocs/test/Application/Home/Controller/IndexController.class.php 第 8 行.
+

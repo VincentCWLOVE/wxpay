@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>萃德士测评</title>
+  <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.4.3/weui.min.css">
+
+</head>
+<body>
+
+  <a class="weui-btn weui-btn_primary">付款1分钱</a>
+
+	<script>
+    
+    //调用微信JS api 支付
+  function jsApiCall()
+  {
+    WeixinJSBridge.invoke('getBrandWCPayRequest',{
+           "appId": '{$data.order.appId}',     //公众号名称，由商户传入     
+           "timeStamp": '{$data.order.timeStamp}',         //时间戳，自1970年以来的秒数     
+           "nonceStr" : '{$data.order.nonceStr}' , //随机串     
+           "package" : '{$data.order.package}',     
+           "signType": '{$data.order.signType}',         //微信签名方式：     
+           "paySign" : '{$data.order.paySign}'
+       },
+      function(res){
+       
+        if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+            
+
+            alert("支付成功");
+            
+        } 
+      }
+    );
+      
+        
+  }
+
+  function callpay()
+  {
+    if (typeof WeixinJSBridge == "undefined"){
+        if( document.addEventListener ){
+            document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+        }else if (document.attachEvent){
+            document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+            document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+        }
+    }else{
+        jsApiCall();
+    }
+  }
+  </script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
